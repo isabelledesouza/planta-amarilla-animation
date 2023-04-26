@@ -1,0 +1,78 @@
+:root {
+ /* --size-divisor: 3;*/
+}
+
+.main-container {
+  background-image: url("./images/planta_amarilla/background-sem-planta-amarilha.png");
+  /*max-width: calc(1400px / var(--size-divisor));*/
+  max-width: calc(512px);
+  height: 100vh;
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  margin: auto;
+  position: relative;
+}
+
+.container-planta-amarilla {
+   
+  width:506px; 
+  /* max-width: 506px;*/
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    position: absolute;
+    top:153px;
+    left: -130px;
+    overflow: hidden;
+    min-height: 500px;
+    transform: scale(.5);
+    /*transform: scale(.5) translate(-310px, 223px);*/
+    /*transform: scale(calc(0.4 / var(--size-divisor))) translate(calc(-411px / var(--size-divisor)), calc(479px / var(--size-divisor)));*/
+  }
+  .img {
+    width: 100%;
+  }
+  .strike {
+    position: absolute;
+    left: 0;
+    animation: plantaSprite 1s steps(1, end) infinite;
+  }
+
+  @keyframes plantaSprite {
+    0% {
+        left: 0;
+    }
+    25% {
+        left: -500px;
+    }
+    50% {
+        left: -1000px;
+    }
+    75% {
+        left: -1500px;
+    }
+    100% {
+        left: -2000px;
+    }
+  }
+  @media (min-width: 576px) {
+    :root {
+      --size-divisor: 2;
+    }
+  }
+  @media (min-width: 768px) {
+    :root {
+      --size-divisor: 1.5;
+    }
+  }
+  @media (min-width: 992px) { 
+    :root {
+      --size-divisor: 1;
+    }
+  }
+  @media (min-width: 1200px) { 
+    :root {
+      --size-divisor: .67;
+    }
+  }
